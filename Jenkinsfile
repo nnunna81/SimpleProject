@@ -7,7 +7,7 @@ pipeline {
    stages {
        stage('Build') {
            agent {
-               /usr/local/bin/docker {
+               docker {
                    image 'golang'
                }
            }
@@ -23,7 +23,7 @@ pipeline {
        }
        stage('Test') {
            agent {
-               /usr/local/bin/docker {
+               docker {
                    image 'golang'
                }
            }
